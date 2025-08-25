@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Mac AutoScroll",
+    "version": "1.0.0",
+    "description": "Automatically scrolls web pages on Mac.",
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["js/website.js"]
+        }
+      ],
+     "icons": {
+     }
+}
