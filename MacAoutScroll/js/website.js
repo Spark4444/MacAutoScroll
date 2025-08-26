@@ -26,7 +26,6 @@ document.addEventListener("mousedown", function(event) {
         scrollOverlay.classList.add("scrollOverlay");
 
         document.body.appendChild(scrollOverlay);
-
         // Store the original mouse position at the start of the scroll
         const originalMouseY = event.clientY;
         const originalMouseX = event.clientX;
@@ -103,11 +102,43 @@ document.addEventListener("mousedown", function(event) {
             const deltaY = e.clientY - originalMouseY;
             const deltaX = e.clientX - originalMouseX;
 
-            // Calculate the scroll speed based on the distance from the original position
-            scrollSpeedY = Math.max(-20, Math.min(20, deltaY / 5));
+            // Get screen dimensions
+            const screenHeight = window.innerHeight;
+            const screenWidth = window.innerWidth;
 
-            // Calculate horizontal scroll speed
-            scrollSpeedX = Math.max(-20, Math.min(20, deltaX / 5));
+            // Calculate percentage of screen moved (0-1 range)
+            const percentageY = Math.abs(deltaY) / screenHeight;
+            const percentageX = Math.abs(deltaX) / screenWidth;
+
+            // Dead zone as percentage of screen (2% of screen height/width)
+            const deadZonePercentage = 0.02;
+            // Maximum scroll speed
+            const maxSpeed = 30;
+            
+            // Calculate the scroll speed based on percentage of screen moved
+            // Only start scrolling if movement exceeds the dead zone percentage
+            if (percentageY < deadZonePercentage) {
+                scrollSpeedY = 0;
+            }
+            else {
+                // Calculate effective percentage after removing dead zone
+                const effectivePercentageY = percentageY - deadZonePercentage;
+                // Scale to maximum speed, maintaining direction
+                const direction = deltaY > 0 ? 1 : -1;
+                scrollSpeedY = direction * Math.min(maxSpeed, effectivePercentageY * maxSpeed * 2);
+            }
+
+            // Same logic for horizontal movement
+            if (percentageX < deadZonePercentage) {
+                scrollSpeedX = 0;
+            } 
+            else {
+                // Calculate effective percentage after removing dead zone
+                const effectivePercentageX = percentageX - deadZonePercentage;
+                // Scale to maximum speed, maintaining direction
+                const direction = deltaX > 0 ? 1 : -1;
+                scrollSpeedX = direction * Math.min(maxSpeed, effectivePercentageX * maxSpeed * 2);
+            }
 
             updateSpeedDirection();
         }
