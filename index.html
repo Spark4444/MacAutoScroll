@@ -17,62 +17,9 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        .test-section {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .instructions {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 15px;
-            border-radius: 5px;
-            z-index: 1000;
-            max-width: 300px;
-        }
     </style>
 </head>
 <body>
-    <div class="instructions">
-        <h3>Mac AutoScroll Test</h3>
-        <p><strong>Instructions:</strong></p>
-        <ol>
-            <li>Make sure the extension is loaded in Chrome</li>
-            <li>Click the middle mouse button (scroll wheel) anywhere on this page</li>
-            <li>Move the mouse to scroll in different directions</li>
-            <li>Click again to stop scrolling</li>
-        </ol>
-    </div>
-    
-    <div id="content">
-        <div class="test-section">
-            <h2>Test Section 1 - Top Left</h2>
-            <p>This is a large scrollable area to test the Mac AutoScroll extension.</p>
-            <p>The content extends far beyond the viewport in both horizontal and vertical directions.</p>
-        </div>
-        
-        <div class="test-section" style="margin-left: 50vw;">
-            <h2>Test Section 2 - Center Right</h2>
-            <p>This section is positioned to the right to test horizontal scrolling.</p>
-            <p>Try middle-clicking and moving your mouse left and right.</p>
-        </div>
-        
-        <div class="test-section" style="margin-top: 100vh;">
-            <h2>Test Section 3 - Bottom</h2>
-            <p>This section is positioned far down to test vertical scrolling.</p>
-            <p>Try middle-clicking and moving your mouse up and down.</p>
-        </div>
-        
-        <div class="test-section" style="margin-left: 100vw; margin-top: 150vh;">
-            <h2>Test Section 4 - Far Bottom Right</h2>
-            <p>This section tests diagonal scrolling capabilities.</p>
-            <p>Try middle-clicking and moving your mouse diagonally.</p>
-        </div>
-    </div>
+    <div id="content"></div>
 </body>
 </html>

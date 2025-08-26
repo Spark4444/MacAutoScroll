@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Mac AutoScroll",
     "version": "1.0.0",
-    "description": "Automatically scrolls web pages on Mac.",
+    "description": "Replica of the AutoScroll feature from chrome on windows for mac and linux",
     "content_scripts": [
         {
           "matches": ["<all_urls>"],
@@ -16,8 +16,5 @@
         }
       ],
      "icons": {
-        "16": "img/AutoScroll.svg",
-        "48": "img/AutoScroll.svg",
-        "128": "img/AutoScroll.svg"
      }
 }
