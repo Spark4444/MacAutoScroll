@@ -21,7 +21,7 @@ document.addEventListener("mousedown", function(event) {
         scrollOverlay.style.width = "100%";
         scrollOverlay.style.height = "100%";
         scrollOverlay.style.zIndex = "9999";
-        scrollOverlay.style.cursor = `url('${AutoScrollSvg}', none)`;
+        scrollOverlay.style.cursor = `url('${AutoScrollSvg}'), none`;
         scrollOverlay.style.background = "rgba(0, 0, 0, 0)";
         scrollOverlay.classList.add("scrollOverlay");
 
