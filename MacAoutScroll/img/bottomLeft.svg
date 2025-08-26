@@ -1,8 +1,8 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="520" height="520">
-	<title>Новий проєкт</title>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" style="rotate: -225deg" viewBox="0 0 520 520" width="20" height="20">
+	<title>Arrow</title>
 	<style>
 		.s0 { fill: #000000 } 
 	</style>
-	<path id="Форма 1" fill-rule="evenodd" class="s0" d="m259.8 324.5c-35.9 0-64.8-28.9-64.8-64.8 0-35.8 28.9-64.7 64.8-64.7 35.8 0 64.7 28.9 64.7 64.8 0 35.8-28.9 64.7-64.7 64.7z"/>
-	<path id="Форма 3 copy 6" fill-rule="evenodd" class="s0" d="m224 410.4l-121.9 11.6 11.6-121.9z"/>
+	<path id="1" fill-rule="evenodd" class="s0" d="m259.8 324.5c-35.9 0-64.8-28.9-64.8-64.8 0-35.8 28.9-64.7 64.8-64.7 35.8 0 64.7 28.9 64.7 64.8 0 35.8-28.9 64.7-64.7 64.7z"/>
+	<path id="2" fill-rule="evenodd" class="s0" d="m384 123l110 136.5-110 136.5z"/>
 </svg>

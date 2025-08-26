@@ -9,6 +9,12 @@
           "js": ["js/website.js"]
         }
       ],
+     "web_accessible_resources": [
+        {
+          "resources": ["img/*.svg"],
+          "matches": ["<all_urls>"]
+        }
+      ],
      "icons": {
      }
 }
