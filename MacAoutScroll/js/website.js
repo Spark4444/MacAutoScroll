@@ -174,6 +174,11 @@ document.addEventListener("mousedown", function(event) {
 
     // Middle mouse button is button 1
     if (event.button === 1 && canScroll) {
+        // Check if the event has been prevented by the website
+        if (event.defaultPrevented) {
+            return;
+        }
+        
         event.preventDefault();
 
         if (!AutoScrollEnabled) {
@@ -199,4 +204,4 @@ document.addEventListener("mousedown", function(event) {
     else if(event.button === 2) {
         stopScrolling();
     }
-});
+}, true);

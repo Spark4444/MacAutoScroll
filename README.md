@@ -7,7 +7,7 @@ This extension is supposed to be faithfull to the original feature as much as po
 ## Features
 
 * **Middle-click auto-scrolling**: Click the middle mouse button to activate auto-scroll mode
-* **Directional scrolling**: Move your mouse in any direction to control scroll speed and directi
+* **Directional scrolling**: Move your mouse in any direction to control scroll speed and direction
 * **Speed control**: Scroll speed increases based on how far you move the mouse from the initial click point
 
 ## Installation
@@ -35,20 +35,25 @@ git clone https://github.com/Spark4444/MacAutoScroll
   - Move diagonally to scroll in both directions simultaneously
 * **Visual indicators**: The cursor will change to show arrows indicating the current scroll direction
 * **Stopping auto-scroll**: 
-  - Click anywhere on the page
-  - Press any key
+  - Right click anywhere on the page
   - Switch to another tab or window
   - Move the mouse back to the center (dead zone)
 
 ## How It Works
 
 * **Event Detection**: The extension listens for middle mouse button clicks (button 1) on all web pages
+
 * **Overlay Creation**: When activated, creates an invisible overlay that captures mouse movements
+
 * **Speed Calculation**: Calculates scroll speed based on mouse distance from the initial click point
-* **Dead Zone**: Implements a 2% screen size dead zone to prevent accidental scrolling from small movements
+
+* **Dead Zone**:  The extension uses a 2% screen size dead zone to make the hitboxes of the initial click point larger so it's easier to navigate back to the center and to use the single direction movements.
+
 * **Direction Mapping**: Maps mouse movement to 8 different scroll directions with corresponding cursor icons
-* **Smooth Scrolling**: Uses `setInterval` to provide smooth, continuous scrolling at 10ms intervals
-* **Auto-cleanup**: Automatically stops scrolling when the user clicks, switches tabs, or moves mouse to center
+
+* **Smooth Scrolling**: Uses `setInterval` for smooth, continuous scrolling at 10ms intervals
+
+* **Auto-cleanup**: Automatically stops scrolling when the user clicks, switches tabs, or moves the mouse to the center
 
 ### Current state of this project
 Finished
