@@ -42,6 +42,23 @@ function removeOverlay() {
 
 const canScroll = document.documentElement.scrollHeight > window.innerHeight || document.documentElement.scrollWidth > window.innerWidth;
 
+// Function to check if an element is scrollable
+function isElementScrollable(element) {
+    const horizontally = element.scrollWidth > element.clientWidth;
+    const vertically = element.scrollHeight > element.clientHeight;
+
+    if (horizontally && vertically) {
+        return "both";
+    }
+    else if (horizontally) {
+        return "horizontal";
+    }
+    else if (vertically) {
+        return "vertical";
+    }
+    return "none";
+}
+
 // Auto-scroll functionality for middle mouse button click
 document.addEventListener("mousedown", function(event) {
     // Original Mouse positions
