@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac AutoScroll - Navigation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+      .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .nav a {
+        display: block;
+        margin: 16px;
+        padding: 16px 32px;
+        background: #fff;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        font-size: 1.2em;
+        transition: background 0.2s;
+      }
+      .nav a:hover {
+        background: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.html">Full Page Scroll (Both Directions)</a>
+      <a href="vertical.html">Vertical Only Scroll</a>
+      <a href="horizontal.html">Horizontal Only Scroll</a>
+      <a href="element-scroll.html">Scrollable Element Inside Body</a>
+    </div>
+  </body>
+</html>

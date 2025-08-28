@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mac AutoScroll - Element Scroll</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        height: 100vh;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .scroll-box {
+        width: 400px;
+        height: 300px;
+        overflow: auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+        padding: 16px;
+        scrollbar-gutter: stable both-edges;
+      }
+      .inner-content {
+        width: 800px;
+        height: 600px;
+        background: linear-gradient(135deg, #e66465, #9198e5);
+        border-radius: 8px;
+      }
+      .nav-link {
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        background: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #333;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+    </style>
+  </head>
+  <body>
+    <a class="nav-link" href="navigation.html">Back to Navigation</a>
+    <div class="container">
+      <div class="scroll-box">
+        <div class="inner-content"></div>
+      </div>
+    </div>
+  </body>
+</html>
