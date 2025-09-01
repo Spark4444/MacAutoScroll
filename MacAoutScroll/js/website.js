@@ -224,17 +224,17 @@ document.addEventListener(
 
       // Function to update scrolling direction based on speed
       function updateSpeedDirection() {
-        if (scrollSpeedY > 0) {
+        if (scrollSpeedY > 0 && scrollbarDirection !== 'horizontal') {
           scrollingDirection.upDown = 1; // Scrolling down
-        } else if (scrollSpeedY < 0) {
+        } else if (scrollSpeedY < 0 && scrollbarDirection !== 'horizontal') {
           scrollingDirection.upDown = -1; // Scrolling up
         } else {
           scrollingDirection.upDown = 0; // No vertical scroll
         }
 
-        if (scrollSpeedX > 0) {
+        if (scrollSpeedX > 0 && scrollbarDirection !== 'vertical') {
           scrollingDirection.leftRight = 1; // Scrolling right
-        } else if (scrollSpeedX < 0) {
+        } else if (scrollSpeedX < 0 && scrollbarDirection !== 'vertical') {
           scrollingDirection.leftRight = -1; // Scrolling left
         } else {
           scrollingDirection.leftRight = 0; // No horizontal scroll
