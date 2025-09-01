@@ -150,6 +150,7 @@ document.addEventListener(
     // Middle mouse button is button 1
     if (event.button === 1 && scrollbarDirection !== 'none' && targetElement) {
       // If autoscroll is already enabled, a middle click should stop it.
+      
       if (autoScrollEnabled) {
         stopScrolling();
         event.preventDefault();
@@ -166,6 +167,8 @@ document.addEventListener(
       // Original Mouse positions
       const originalMouseY = event.clientY;
       const originalMouseX = event.clientX;
+
+      let hasScrolled = false;
 
       // Scroll speed
       let scrollSpeedX = 0;
@@ -238,6 +241,10 @@ document.addEventListener(
           scrollingDirection.leftRight = -1; // Scrolling left
         } else {
           scrollingDirection.leftRight = 0; // No horizontal scroll
+        }
+
+        if (scrollingDirection.upDown !== 0 || scrollingDirection.leftRight !== 0) {
+          hasScrolled = true;
         }
 
         // Set the cursor depending on the scroll direction
@@ -322,6 +329,13 @@ document.addEventListener(
         passive: false,
       });
       document.addEventListener('keydown', preventScrolling, { capture: true });
+
+      // Stop scrolling on mouse up if the user has scrolled, e.g. it was a long click
+      document.addEventListener('mouseup', function () {
+        if (hasScrolled) {
+           stopScrolling();
+        }
+      }, { once: true });
     }
   },
   true
