@@ -1,8 +1,18 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" width="20" height="20">
-	<title>Arrow</title>
-	<style>
-		.s0 { fill: #000000 } 
-	</style>
-	<path id="1" fill-rule="evenodd" class="s0" d="m259.8 324.5c-35.9 0-64.8-28.9-64.8-64.8 0-35.8 28.9-64.7 64.8-64.7 35.8 0 64.7 28.9 64.7 64.8 0 35.8-28.9 64.7-64.7 64.7z"/>
-	<path id="2" fill-rule="evenodd" class="s0" d="m384 123l110 136.5-110 136.5z"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke: #fff;
+        stroke-width: 1px;
+      }
+
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g transform="rotate(-90 7 6)">
+    <path id="Arrow" class="cls-1" d="M5.991,14.007L0,7,12,7.013Z" transform="translate(1 -1)"/>
+    <circle id="Circle" class="cls-2" cx="6" cy="3" r="3" transform="translate(1 -1)"/>
+  </g>
 </svg>

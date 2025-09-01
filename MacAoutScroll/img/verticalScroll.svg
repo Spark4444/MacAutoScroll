@@ -28,16 +28,4 @@
      <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z"/>
     <circle class="arrow" cx="6" cy="3" r="3"/>
   </g>
-
-  <!-- Left Arrow -->
-  <g transform="translate(1.5, 5) scale(0.5) rotate(90 7 6)">
-    <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z" transform="translate(1, -1)"/>
-    <circle class="arrow" cx="6" cy="3" r="3" transform="translate(1, -1)"/>
-  </g>
-
-  <!-- Right Arrow -->
-  <g transform="translate(13.5, 5) scale(0.5) rotate(-90 7 6)">
-     <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z" transform="translate(1, -1)"/>
-    <circle class="arrow" cx="6" cy="3" r="3" transform="translate(1, -1)"/>
-  </g>
 </svg>

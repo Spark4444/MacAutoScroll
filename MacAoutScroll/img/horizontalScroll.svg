@@ -17,18 +17,6 @@
   <circle class="bg-circle" cx="11" cy="11" r="10.5"/>
   <circle cx="11" cy="11" r="2" fill="#000"/>
   
-  <!-- Top Arrow -->
-  <g transform="translate(5, 1.5) scale(0.5) rotate(180 6 7)">
-    <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z"/>
-    <circle class="arrow" cx="6" cy="3" r="3"/>
-  </g>
-
-  <!-- Bottom Arrow -->
-  <g transform="translate(5, 13.5) scale(0.5)">
-     <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z"/>
-    <circle class="arrow" cx="6" cy="3" r="3"/>
-  </g>
-
   <!-- Left Arrow -->
   <g transform="translate(1.5, 5) scale(0.5) rotate(90 7 6)">
     <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z" transform="translate(1, -1)"/>
