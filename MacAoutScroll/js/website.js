@@ -12,9 +12,9 @@ const bottomLeftSvg = chrome.runtime.getURL('img/bottomLeft.svg');
 const bottomRightSvg = chrome.runtime.getURL('img/bottomRight.svg');
 
 // Dead zone as percentage of screen (2% of screen height/width)
-const deadZonePercentage = 0.02;
+const deadZonePercentage = 0.04;
 // Maximum scroll speed
-const maxSpeed = 30;
+const maxSpeed = 60;
 
 // General variables
 let autoScrollEnabled = false;
