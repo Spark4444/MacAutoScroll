@@ -1,31 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
   <defs>
     <style>
-      .bg-circle {
+      .cls-1 {
         fill: #fff;
         stroke: #000;
         stroke-width: 1px;
       }
-      .arrow {
-        fill: #000;
-        stroke: #000;
-        stroke-width: 1px;
+
+      .cls-2 {
         fill-rule: evenodd;
       }
     </style>
   </defs>
-  <circle class="bg-circle" cx="11" cy="11" r="10.5"/>
-  <circle cx="11" cy="11" r="2" fill="#000"/>
-  
-  <!-- Left Arrow -->
-  <g transform="translate(1.5, 5) scale(0.5) rotate(90 7 6)">
-    <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z" transform="translate(1, -1)"/>
-    <circle class="arrow" cx="6" cy="3" r="3" transform="translate(1, -1)"/>
-  </g>
-
-  <!-- Right Arrow -->
-  <g transform="translate(13.5, 5) scale(0.5) rotate(-90 7 6)">
-     <path class="arrow" d="M5.991,14.007L0,7,12,7.013Z" transform="translate(1, -1)"/>
-    <circle class="arrow" cx="6" cy="3" r="3" transform="translate(1, -1)"/>
-  </g>
+  <circle class="cls-1" cx="11" cy="11" r="11"/>
+  <path id="Triangle_1" data-name="Triangle 1" class="cls-2" d="M2.833,11l3-3v6Z"/>
+  <path id="Triangle_1-2" data-name="Triangle 1" class="cls-2" d="M19.206,11l-3,3V8Z"/>
+  <circle cx="11" cy="11" r="2"/>
 </svg>

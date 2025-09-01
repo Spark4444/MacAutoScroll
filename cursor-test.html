@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor Test Page</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+
+      nav {
+        margin-bottom: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      nav a:hover {
+        background-color: #0056b3;
+      }
+
+      .cursor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .test-box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        transition: background-color 0.3s;
+      }
+      .test-box:hover {
+        background-color: #e9e9e9;
+      }
+
+      .cursor-autoScroll {
+        cursor: url('MacAoutScroll/img/autoScroll.svg'), auto;
+      }
+      .cursor-bottom {
+        cursor: url('MacAoutScroll/img/bottom.svg'), auto;
+      }
+      .cursor-bottomLeft {
+        cursor: url('MacAoutScroll/img/bottomLeft.svg'), auto;
+      }
+      .cursor-bottomRight {
+        cursor: url('MacAoutScroll/img/bottomRight.svg'), auto;
+      }
+      .cursor-horizontalScroll {
+        cursor: url('MacAoutScroll/img/horizontalScroll.svg'), auto;
+      }
+      .cursor-left {
+        cursor: url('MacAoutScroll/img/left.svg'), auto;
+      }
+      .cursor-right {
+        cursor: url('MacAoutScroll/img/right.svg'), auto;
+      }
+      .cursor-top {
+        cursor: url('MacAoutScroll/img/top.svg'), auto;
+      }
+      .cursor-topLeft {
+        cursor: url('MacAoutScroll/img/topLeft.svg'), auto;
+      }
+      .cursor-topRight {
+        cursor: url('MacAoutScroll/img/topRight.svg'), auto;
+      }
+      .cursor-verticalScroll {
+        cursor: url('MacAoutScroll/img/verticalScroll.svg'), auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="navigation.html">Back to Navigation</a>
+    </nav>
+    <h1>Cursor Test Page</h1>
+    <p>Hover over the boxes to see the custom cursors.</p>
+
+    <div class="cursor-grid">
+      <div class="test-box cursor-autoScroll">autoScroll.svg</div>
+      <div class="test-box cursor-bottom">bottom.svg</div>
+      <div class="test-box cursor-bottomLeft">bottomLeft.svg</div>
+      <div class="test-box cursor-bottomRight">bottomRight.svg</div>
+      <div class="test-box cursor-horizontalScroll">horizontalScroll.svg</div>
+      <div class="test-box cursor-left">left.svg</div>
+      <div class="test-box cursor-right">right.svg</div>
+      <div class="test-box cursor-top">top.svg</div>
+      <div class="test-box cursor-topLeft">topLeft.svg</div>
+      <div class="test-box cursor-topRight">topRight.svg</div>
+      <div class="test-box cursor-verticalScroll">verticalScroll.svg</div>
+    </div>
+  </body>
+</html>
