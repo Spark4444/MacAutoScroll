@@ -144,7 +144,7 @@ document.addEventListener("mousedown", function (event) {
     const scrollbarDirection = isElementScrollable(targetElement);
 
     // Middle mouse button is button 1
-    if (event.button === 1 && scrollbarDirection !== "none") {
+    if (event.button === 1 && scrollbarDirection !== "none" && targetElement) {
         // If autoscroll is already enabled, a middle click should stop it.
         if (autoScrollEnabled) {
             stopScrolling();
