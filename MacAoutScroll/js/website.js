@@ -66,35 +66,49 @@ function removeOverlay() {
   }
 }
 
+// Function to check if an element is overflow hidden
+function isElementOverflowHidden(element) {
+    const styles = getComputedStyle(element);
+    const result = {
+        horizontal: styles.overflowX === "hidden" || styles.overflowX === "clip",
+        vertical: styles.overflowY === "hidden" || styles.overflowY === "clip"
+    };
+
+    return result;
+}
+
 // Function to check if an element has a scrollbar
 function isElementScrollable(element) {
-    function checkScrollBar(element, dir) {
-        dir = dir === "vertical" ? "scrollTop" : "scrollLeft";
+    if (element) {
+        function checkScrollBar(element, dir) {
+            dir = dir === "vertical" ? "scrollTop" : "scrollLeft";
 
-        let res = !!element[dir];
+            let res = !!element[dir];
 
-        if (!res) {
-            element[dir] = 1;
-            res = !!element[dir];
-            element[dir] = 0;
+            if (!res) {
+                element[dir] = 1;
+                res = !!element[dir];
+                element[dir] = 0;
+            }
+            
+            return res;
         }
-        
-        return res;
-    }
 
-    const hasVerticalScrollbar = checkScrollBar(element, "vertical");
-    const hasHorizontalScrollbar = checkScrollBar(element, "horizontal");
+        const hasOverflow = isElementOverflowHidden(element);
+        const hasVerticalScrollbar = checkScrollBar(element, "vertical") && !hasOverflow.vertical;
+        const hasHorizontalScrollbar = checkScrollBar(element, "horizontal") && !hasOverflow.horizontal;
 
-    if (hasHorizontalScrollbar && hasVerticalScrollbar) {
-        return "both";
-    } 
-    else if (hasHorizontalScrollbar) {
-        return "horizontal";
-    } 
-    else if (hasVerticalScrollbar) {
-        return "vertical";
+        if (hasHorizontalScrollbar && hasVerticalScrollbar) {
+            return "both";
+        } 
+        else if (hasHorizontalScrollbar) {
+            return "horizontal";
+        } 
+        else if (hasVerticalScrollbar) {
+            return "vertical";
+        }
+        return "none";
     }
-    return "none";
 }
 
 // Find the closest scrollable ancestor element
