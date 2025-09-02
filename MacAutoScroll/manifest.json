@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Mac AutoScroll",
-    "version": "1.5.6",
+    "version": "1.5.8",
     "description": "Replica of the AutoScroll feature from chrome on windows for mac and linux",
     "content_scripts": [
         {

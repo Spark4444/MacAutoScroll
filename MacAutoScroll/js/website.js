@@ -197,7 +197,7 @@ document.addEventListener(
 
         // Calculate the scroll speed based on percentage of screen moved
         // Only start scrolling if movement exceeds the dead zone percentage
-        if (percentageY < deadZonePercentage) {
+        if (percentageY < deadZonePercentage || scrollbarDirection === 'horizontal') {
           scrollSpeedY = 0;
         } else {
           // Calculate effective percentage after removing dead zone
@@ -210,7 +210,7 @@ document.addEventListener(
         }
 
         // Same logic for horizontal movement
-        if (percentageX < deadZonePercentage) {
+        if (percentageX < deadZonePercentage || scrollbarDirection === 'vertical') {
           scrollSpeedX = 0;
         } else {
           // Calculate effective percentage after removing dead zone
@@ -227,17 +227,17 @@ document.addEventListener(
 
       // Function to update scrolling direction based on speed
       function updateSpeedDirection() {
-        if (scrollSpeedY > 0 && scrollbarDirection !== 'horizontal') {
+        if (scrollSpeedY > 0) {
           scrollingDirection.upDown = 1; // Scrolling down
-        } else if (scrollSpeedY < 0 && scrollbarDirection !== 'horizontal') {
+        } else if (scrollSpeedY < 0) {
           scrollingDirection.upDown = -1; // Scrolling up
         } else {
           scrollingDirection.upDown = 0; // No vertical scroll
         }
 
-        if (scrollSpeedX > 0 && scrollbarDirection !== 'vertical') {
+        if (scrollSpeedX > 0) {
           scrollingDirection.leftRight = 1; // Scrolling right
-        } else if (scrollSpeedX < 0 && scrollbarDirection !== 'vertical') {
+        } else if (scrollSpeedX < 0) {
           scrollingDirection.leftRight = -1; // Scrolling left
         } else {
           scrollingDirection.leftRight = 0; // No horizontal scroll

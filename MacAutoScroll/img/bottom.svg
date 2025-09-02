@@ -12,5 +12,5 @@
     </style>
   </defs>
   <path id="Arrow" class="cls-1" d="M5.991,14.007L0,7,12,7.013Z"/>
-  <circle id="Circle" class="cls-2" cx="6" cy="3" r="3"/>
+    <circle id="Circle" class="cls-2" cx="6" cy="3" r="3"/>
 </svg>
